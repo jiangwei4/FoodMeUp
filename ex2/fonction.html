@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>Menu</title>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="fonction.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="param">
+        <fieldset> <legend>Nombre</legend>
+            <form name="formulaire1">
+                <p>
+                    <label for="x">Valeur de x </label>
+                    <input name="x" type="number" min="0" ng-model="valx" required> 
+                </p>
+                <p>
+                    <label for="k">Valeur de k </label>
+                    <input name="k" type="number" min="0" ng-model="valk" required> 
+                </p>
+                <button ng-click="Reset()" >reset</button>
+                <button ng-disabled="formulaire1.x.$invalid || formulaire1.k.$invalid" ng-click="SommeUnSurK(valx,valk)">Envoyer</button>
+            </form>
+        </fieldset>
+        <fieldset> <legend>Résultat</legend>
+            <p>{{resultat}}</p>
+            <br>
+            <br>
+            <p>S({{occurence}})={{somme}}>{{valx}}</p>
+        </fieldset>
+    </div>
+</body>
+</html>
