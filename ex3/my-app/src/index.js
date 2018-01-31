@@ -11,7 +11,7 @@ class App extends React.Component{
     render(){
         return (
             <div>
-                <p>c'est parti !!</p>
+                <p> Vos recettes de cuisines</p>
                 <button></button>
                 </div>
         )
