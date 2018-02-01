@@ -14,7 +14,7 @@ render() {
         </div>
         <div className="recette">
         <h2>{this.props.details.name}</h2>
-        <img src={this.props.details.image} alt=""/>
+        <img src={this.props.details.image} alt="" height="300" width="400"/>
         <ul className="liste-ingredients">
         {this.props.details.ingredients}
         </ul>
