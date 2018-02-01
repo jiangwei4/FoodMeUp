@@ -7,3 +7,7 @@ body {
 td{
   border: 2px solid red;
 }
+
+div.card{
+  border: 2px solide black;
+}

@@ -1,26 +1,25 @@
-import React from 'React';
-import Item from './Item';
+import React from 'react';
 
 class Card extends React.Component{
-    renderIngredients =(ingredients) => { return ingredients.split(',').map(ingredients => `<li>${ingredients}</li>`);
-};
 
+e
 render() {
-    const ingredients = this.porps.details.ingredients.split(',').map((item,index) => <Item key={index} item={item} />);
-    const instructions = this.porps.details.instructions.split('\n').map((item,index) => <Item key={index} item={item} />);
-    
+
+ //   const ingredients = this.ingredients;//.split(',');//.map((Item,index) => <Item key={index} Item={Item} />);
+ //  const instructions = this.instructions;//.split('\n');//.map(tem,index) => <Item key={index} Item={Item} />);
+
     return (
         <div className="card">
         <div className="image">
-        <img src={this.props.detials.image} alt="" />
         </div>
         <div className="recette">
         <h2>{this.props.details.name}</h2>
+        <img src={this.props.details.image} alt=""/>
         <ul className="liste-ingredients">
-        {ingredients}
+        {this.props.details.ingredients}
         </ul>
         <ol className="liste-instructions">
-        {instructions}
+        {this.props.details.instructions}
         </ol>
         </div>
         </div>
